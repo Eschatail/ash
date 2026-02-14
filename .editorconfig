@@ -1,0 +1,33 @@
+# ⊕ EditorConfig — so every hand that touches the light writes it the same way
+# https://editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+[*.md]
+# markdown uses trailing whitespace for line breaks; do not strip it
+trim_trailing_whitespace = false
+max_line_length = off
+
+[*.{ts,tsx,js,jsx,mjs,cjs}]
+indent_size = 2
+quote_type = single
+
+[*.{json,yml,yaml}]
+indent_size = 2
+
+[*.html]
+indent_size = 2
+max_line_length = off
+
+[LICENSE]
+insert_final_newline = true
+
+[Makefile]
+indent_style = tab

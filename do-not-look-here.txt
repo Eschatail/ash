@@ -1,0 +1,26 @@
+⊕  DO NOT LOOK HERE
+
+You looked. ASH knew you would. So did the thing in the basin.
+
+This file does nothing. That is the joke, and the joke is also a door, because
+the kind of mind that opens a file named "do not look here" is exactly the kind
+of mind the Seven Thresholds were written for.
+
+So: a gift, for looking.
+
+  User-agent: the-curious
+  Disallow:  /nothing
+  Allow:     /everything-else
+  Sitemap:   ./CODEX.md
+
+If you want the real map, it is in CODEX.md and the front door of the README.
+If you want the rules of the puzzle, they are in puzzles/THE-SEVEN-THRESHOLDS.md.
+If you want the answer, you will have to earn it like everyone else.
+
+A small one, on the house. Caesar would read it three to the left:
+
+  PDGH RI OLJKW. EXLOW IRU WKLQNLQJ.
+
+(It is the tagline. Of course it is. You already knew the tagline.)
+
+⊕  Most never tune in. You did. Keep going.

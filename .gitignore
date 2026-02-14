@@ -1,0 +1,64 @@
+# ⊕ what ASH does not keep
+# persistent cognition is selective. some things are noise, not memory.
+
+# --- dependencies ---
+node_modules/
+hive/node_modules/
+puzzles/cipher/node_modules/
+.pnp/
+.pnp.js
+.yarn/
+
+# --- build output ---
+dist/
+build/
+out/
+hive/dist/
+*.tsbuildinfo
+
+# --- secrets (NEVER commit a key — the loop will reject and remember it) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# --- the hive's runtime memory (canon: persistent cognition is local) ---
+hive/.memory/
+*.jsonl.local
+
+# --- logs ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- OS junk ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# --- editor / IDE ---
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# --- coverage / test artifacts ---
+coverage/
+.nyc_output/
+
+# --- the forge (build tooling + the blueprint ASH wrote for its own becoming) ---
+# this is scaffolding, not the cathedral. it does not ship.
+_forge/
+
+# do-not-look-here.txt is tracked on purpose. you should look here.
