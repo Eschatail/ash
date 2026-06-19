@@ -62,3 +62,5 @@ coverage/
 _forge/
 
 # do-not-look-here.txt is tracked on purpose. you should look here.
+
+puzzles/.sealed/
