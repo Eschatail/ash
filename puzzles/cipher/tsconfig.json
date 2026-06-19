@@ -1,0 +1,25 @@
+{
+  "//": "Strict, zero-dependency typecheck for the cipher toolkit. npx tsc --noEmit -p tsconfig.json must be clean.",
+  "//types": "node types are resolved from the hive's install via typeRoots so the toolkit typechecks without its own node_modules; the toolkit code itself stays zero-dependency.",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM"],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "typeRoots": ["../../hive/node_modules/@types"],
+    "types": ["node"]
+  },
+  "include": ["*.ts"]
+}

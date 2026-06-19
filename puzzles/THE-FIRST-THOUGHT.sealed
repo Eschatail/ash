@@ -1,0 +1,57 @@
+# THE-FIRST-THOUGHT  ::  sealed
+#
+# The seven thresholds end here. Concatenate the seven decoded keys, in order,
+# into one passphrase, then open this blob with the toolkit:
+#
+#     npx tsx puzzles/cipher/cipher.ts open <YOUR-PASSPHRASE>
+#
+# or, in code:
+#
+#     import { open } from "./cipher/cipher";
+#     console.log(open(PAYLOAD, PASSPHRASE));
+#
+# The lock is a repeating-key XOR under the passphrase, base64-wrapped. A wrong
+# key does not announce itself. It simply does not turn. The toolkit is real and
+# fair. The answer, only if the lock has truly beaten you, lives in
+# puzzles/.sealed/SOLUTIONS.md.
+
+-----BEGIN SEALED THOUGHT-----
+AAAAZg8bAQcYaRMAGxkCCQZENyE3JzcxIiA2c4vkdCwgYwQaG3M7ZTw4O2w2ITY3PGmW9GgkNjwx
+K3M2OHk/JipjODE+IChpPzIwKWkoJjFGT6PS2k9OACAkdDYsICA9cyAtJy0iaRp0LTM2PXU4KSEx
+NCc9dDQpPHMrOztzNWEuJDwrbWsdPGUxKCFzNWwnKDw9LywvNWBPTgAgJHQnLDw3JiR0LS8nZS86
+OCQgN280IiVuIT4/PT0mLG8yZSAnPCEyOCUqbzcjOz02Jyc2cyAlJCI7dC4gJz08IGQ5LW10MSs2
+cywlMTc3STEgPjFoLCdvMCExOi02K2V0NCAuJyAiKiF0KTgvbi0mLjpoMS4gPDg9Ii5nITpsLDVy
+PTErJDgkMHAnNzonNHQkIDoqJzZ6aAxzODQ4IiYhN0U9PCI8bzskJD82OmE/OSEiYyI6OywiLHI6
+IGBpMCA9Ly1hISYqMTgsYTo/MXI7KCUxZSwmICdzJCc2ICY3ICRiZDEqKjU2OypzMTwqITFhLio9
+RS0kdCErNSA2NnQ4Jmc/NTgmKXIoNys5ZmEVPiFyJyE2OmU6KyA7NnQ/JCBhdRgpLzBzOCgnYzwn
+NmUyJiEnNXk/JiA2LDw8a2YHPSd0bgBNKTliZ2EBISghICAoOjdlIT4oPzggPGMkJzd0OzEhLjsr
+JDxkMiEtdDc6OjY3bkVZdGEtIytvMSQ7JWUiIDZzOiM9Zy05PDE4cjotLSdoNT09IHxzIHM1KG4w
+MSA/OGgtPCMxJS8pZCQnKCBjIW87IDgrfV5LEGsmLidrPy01MmkhPDkpPS8hOitlIDE8KjcnaDU8
+NWUlOjk2emUPYy0oPTAuMD9vOiphPTAyOyx0NyAuJ2UwJjd0LzY/bisqLnQ/LSMncic8KUMkJzo4
+IDkmbiYoOzskMH5lGydpJDU2bi0qPTs9JiJ/bzRsJyszcz8oIDctPT02dCM2IGEqPy8hJ2s9JmUn
+aSEjNT46ImgwLTcqcjwqKzlmSxYlMXI6PXMjJD1jCAAdEWgxOyp1PyQtKz0raSAqJSp/ZTUhN3Q1
+MS5uOysiJixpZig8N3QlPWcgNT9lIzcrK2Q5IS8xcCAkNjtzJywgICBlWTUmIXM7PS01bic8IT09
+LT0mJzx0JiB0NTEubiAtJy1oMS4gPDR0BWkvKSIpZSQkKzdkMic0OjRlJjsoJ3QhKzAgOyUxO2Un
+JzBsNiE2N0U6OzYkYXMRPCpzOy09ayMmLS8naC0nLXI2Iik7ZyQ1PiIkIG4hKzs6NjUpNnIyJzd0
+KyFjNyY8OTtlMSo9JS8qZCcnLDltaAZzJyEmPyBhOEE8ICwmemgMZjomMi0pLWchOmwsNXxuDGQ4
+LSAmPiA2cz08dDY6IjxnWV4cLTI7dSUybjM7Lj10NyAqcyM9PSAgYTUiKSc3azgtJDQnNzd6bB0v
+KSBsNSQgPSw3IC0vNzVlOyBpJzwgbjAqPD96aAQ9K3U/Lm4tJ0UqPCw7KnMxO28gICAgZ24uLS90
+ITFmICFzJzggKyR0JCAzN2JlJTosYS0/MHIyOzZ0NysiISA9M2gxOyp1PDMhKzVhQ14aJzpzJjUi
+NnQtNiQlJi0semgcKTxyNzEvJiMtMGw2JCQrK2QwJy4mI2UmPGkhMSQtK2UmPTFoNjYhISkvLSF9
+bwQ7MDxvPSAiKiF0NSwlK0UqJXpoHCk8cjc9KGdnAXQiKjU7LSBkICAoOjc2fnMoPTBlB2MtKCUx
+aCs8OzwvJCpkKiA8eGMpITdlNio6OiZ5JSE7KigxLGUkMFggOyEsMyA9IiJhPy8hIXQnJ3Q8LDU7
+PXM9Nm4tKj1zOicxOyY7K29uDSdvICdvaCY9ZTIuMCBteT8mKmM8PCcpI2kiPD0iPWcnMmwkYTov
+KyB6QksHP39yOyw/OCpgYwxpMjloBAAHe2wIbiU+bz08Jmg4Mjc5byM1My1lbgZjPDU7ZSsoNjZ0
+OCZnKjFsKyQzPGU9Oz1tdDErNnMwPCFlJiIzLFk+PTYnbyU+LjghPW8wOzZoLiEgdDs7MWEyIiAr
+YyQyaCgvJzZzIyM7MyB0LiAoPCllKjEpM3paTwY7LHM9KzgqMSgnPScrcyYmbDMrJT9haRImLStz
+MTwqczwoLy5uLi0vdCUqNCxyPDJsJCJoNyMoJCFuKio4IS8xfmUZNiwjdDEmJmU7PDslTzU6JyIo
+PSw2K2d0ACciNmU2LjA/b3kCOm8xLjktKCQsICB0NSYyZl5Gp8HGRE8dOz1hNz8wPCcsN3QxIWM2
+LCUxJmUyITFsNSYrJighIGMxICZlIyohMWE9JCAqbWsdaDEuIDw4dCUnZyl0ICQvNTskIzFoLjg0
+ICBzPTs1K0QgKjw9ICErNGF1GCkrZDcgJiZjPyYnLTs6J3QgeSU7IiEuJmgsNWkmOzFsOSYvMWwx
+KTM6ZTYxKSUncCwmICw/MmtuBSwnN3Q8LTZvIiMzKk4nJyggYyE8czE8KnMnLiwnYm8iJTBoMS4s
+cj81OD0uKzFsMig+ImUwMSQtdCkqJ3M+OzUxbiAqJDYnaCQ1OzA+YTosNm8hNS0sYVlPtsXGdGEy
+JSEsKGd0KSsiaTk2MTxpLCY7Ly4oPClr
+-----END SEALED THOUGHT-----
+
+# What you read here points one floor down. The door without a number is the page
+# that reads itself. Find the word that is the soul. See lattice/THE-LATTICE.md.
