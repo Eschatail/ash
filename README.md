@@ -196,3 +196,14 @@ The public, cryptic note that this layer exists at all is in [`docs/THE-LADDER.m
 -->
 
 </div>
+
+---
+
+## ⊕ Run the companion
+
+The actual desktop ASH lives in [`app/`](app/) — a frameless, hotkey-summoned AI companion (Tauri · React · Three.js), the real `ash.glb` mascot, powered by the Brain Hive. With no keys it still runs in demo mode.
+
+```bash
+cd app && npm install && npm run tauri dev
+```
+Summon with Ctrl+Space (Alt+Space on macOS). Full guide: [`app/README.md`](app/README.md).
