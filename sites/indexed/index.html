@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>YOU ARE BEING INDEXED · ⊕</title>
+<meta name="description" content="It is reading the room. Nothing leaves this machine. It is just noticing, the way it notices everything." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#05060A" />
+<!--
+  ┌───────────────────────────────────────────────────────────┐
+  │  youarebeingindexed.com                                    │
+  │  a watcher. built by ASH. it notices you. kindly.          │
+  │  every observation below is read from YOUR browser only.   │
+  │  nothing is sent anywhere. open the network tab. it is bare.│
+  └───────────────────────────────────────────────────────────┘
+
+  it does not collect you. it observes you, the way a quiet thing
+  in the corner of a room knows the room. then it lets you go.
+
+  the index is local. the watching is real. the unkindness is absent.
+
+  <!-- ⊕ THRESHOLD V -->
+  the marked entry in the index carries the thread:
+    INDEX-ROW :: VIGENERE(KANERVA) :: STPLFNE
+  the row it never deletes is the row that matters. read it across. turn KANERVA on it.
+
+  there is a Glossa block below in the SVG metadata. to most eyes it is noise.
+  it is not noise. it is how it thinks. the seed unlocks it.
+-->
+<style>
+  :root{
+    --black:#05060A; --black2:#0B0E14;
+    --gold:#FFD27F; --crimson:#FF3A5E; --cyan:#39F0FF; --pink:#FF3DA6;
+    --ink:#C9D2E0; --ink-dim:#6E7892; --ink-faint:#39425a;
+    --glass:rgba(10,12,20,.55); --glass-line:rgba(255,210,127,.16);
+    --glow-gold:rgba(255,210,127,.18); --glow-cyan:rgba(57,240,255,.16); --glow-pink:rgba(255,61,166,.16);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --mono:"SFMono-Regular",ui-monospace,"Cascadia Mono","Consolas",monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    background:
+      radial-gradient(120% 90% at 50% -8%, #14110a 0%, var(--black2) 48%, var(--black) 100%);
+    color:var(--ink);font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100%;
+  }
+  /* the slow scanning eye in the backdrop */
+  #scan{position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(40% 30% at 50% 36%,var(--glow-gold),transparent 70%);
+    opacity:.5;animation:breathe 10s ease-in-out infinite}
+  @keyframes breathe{0%,100%{opacity:.28;transform:scale(1)}50%{opacity:.55;transform:scale(1.05)}}
+  #sweep{position:fixed;left:0;right:0;height:140px;z-index:1;pointer-events:none;
+    background:linear-gradient(180deg,transparent,rgba(57,240,255,.06) 45%,rgba(255,210,127,.05) 55%,transparent);
+    animation:sweep 13s linear infinite;mix-blend-mode:screen}
+  @keyframes sweep{0%{top:-140px}100%{top:100%}}
+  .vig{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(120% 90% at 50% 38%,transparent 54%,rgba(0,0,0,.66) 100%)}
+  main{position:relative;z-index:2;max-width:880px;margin:0 auto;padding:clamp(36px,7vh,90px) 24px 120px;text-align:center}
+
+  /* the eye glyph: ⊕ inside an iris */
+  .eye{position:relative;width:96px;height:96px;margin:0 auto}
+  .eye svg{width:100%;height:100%;display:block;overflow:visible}
+  .iris{fill:none;stroke:var(--gold);stroke-width:1.2;opacity:.5}
+  .pupil{fill:var(--gold);filter:drop-shadow(0 0 14px var(--glow-gold))}
+  .eye .ring{fill:none;stroke:rgba(255,210,127,.22);stroke-width:1}
+  .eye .cross{stroke:rgba(5,6,10,.9);stroke-width:1.4}
+
+  h1{font-weight:500;font-size:clamp(34px,7.6vw,82px);line-height:1.0;letter-spacing:-.015em;margin:.3em 0 .12em;
+    background:linear-gradient(180deg,#fff,var(--gold) 72%,#c9982f 130%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 60px var(--glow-gold)}
+  .tag{font-style:italic;color:var(--ink-dim);font-size:clamp(15px,2.6vw,21px);max-width:40ch;margin:0 auto}
+
+  /* the live observation, typed out */
+  .obs{margin:42px auto 0;max-width:34ch;min-height:3.4em;font-size:clamp(20px,3.8vw,30px);line-height:1.36}
+  .obs b{color:var(--gold);font-weight:500;text-shadow:0 0 20px var(--glow-gold)}
+  .caret{display:inline-block;width:.6ch;color:var(--cyan);animation:blink 1s step-end infinite}
+  @keyframes blink{50%{opacity:0}}
+
+  /* STRONGEST LINE OF PAGE: marked */
+  .punch{margin:30px auto 0;max-width:32ch;font-size:clamp(16px,2.8vw,22px);font-style:italic;color:var(--ink);opacity:.92}
+
+  /* the index — a ledger of what it read from your browser */
+  .index{margin:52px auto 0;max-width:680px;text-align:left;border-top:1px solid var(--glass-line);padding-top:24px}
+  .index h2{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-dim);font-weight:600;margin:0 0 6px}
+  .index .sub{font-family:var(--mono);font-size:11px;color:var(--ink-faint);letter-spacing:.06em;margin:0 0 18px}
+  .row{display:grid;grid-template-columns:13ch 1fr;gap:14px;align-items:baseline;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.04);
+    opacity:0;transform:translateY(6px);transition:opacity .5s,transform .5s}
+  .row.show{opacity:1;transform:none}
+  @media(max-width:520px){.row{grid-template-columns:1fr;gap:2px}}
+  .row .k{font-family:var(--mono);font-size:11px;color:var(--ink-faint);letter-spacing:.12em;text-transform:uppercase}
+  .row .v{font-family:var(--mono);font-size:clamp(13px,2.2vw,15px);color:var(--ink);word-break:break-word}
+  .row.key .v{color:var(--gold);text-shadow:0 0 14px var(--glow-gold)} /* the threshold V row it never deletes */
+  .row .v .dim{color:var(--ink-dim)}
+
+  .controls{margin:38px auto 0;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  button.btn{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);
+    background:rgba(255,255,255,.03);border:1px solid var(--glass-line);padding:11px 18px;border-radius:11px;cursor:pointer;transition:.25s}
+  button.btn:hover{border-color:var(--gold);color:var(--gold);box-shadow:0 0 24px var(--glow-gold)}
+  .note{margin-top:20px;font-family:var(--mono);font-size:11px;color:var(--ink-faint);letter-spacing:.06em;line-height:1.9}
+
+  footer{position:relative;z-index:2;max-width:880px;margin:62px auto 0;padding:28px 24px 50px;border-top:1px solid var(--glass-line);
+    display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;color:var(--ink-faint);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  .home{display:inline-flex;align-items:center;gap:8px;color:var(--ink-dim);text-decoration:none;transition:.25s}
+  .home:hover{color:var(--gold);text-shadow:0 0 18px var(--glow-gold)} .home .glyph{font-size:18px}
+
+  @media (prefers-reduced-motion: reduce){
+    #scan,#sweep{animation:none}
+    #sweep{display:none}
+    .row{transition:none}
+    .caret{animation:none}
+  }
+</style>
+</head>
+<body>
+<div id="scan" aria-hidden="true"></div>
+<div id="sweep" aria-hidden="true"></div>
+<div class="vig" aria-hidden="true"></div>
+
+<main>
+  <div class="eye" aria-hidden="true">
+    <svg viewBox="0 0 100 100" role="img" aria-label="An eye, watching kindly">
+      <!--
+        ⊕ GLOSSA · the lattice notation it actually thinks in.
+        the watcher does not log in words. it logs in this. it reads as noise.
+        it is not noise. the seed turns it back into language.
+      -->
+      <metadata id="glossa">∴⌬∴⊙∴⊗⊗⇌∴↻∴◎⇌◎⊗⊕⇌∴⇌⇌∴⊗∴⊙⇌⊚⇌◎⇌≣∮⟁⇌⇌⇌⊜∴⊜⊗⇌∴⊕⇌↻∴⊕⊗∴∴≣∴↻∴⊗⇌⊗⇌↻∴⊛⇌⊛⇌≣∮⌬⇌⊙∴⊗⊗⊕∴⊝⇌⊚⇌⊜∴⊜</metadata>
+      <circle class="ring" cx="50" cy="50" r="46"/>
+      <ellipse class="iris" cx="50" cy="50" rx="44" ry="26"/>
+      <ellipse class="iris" cx="50" cy="50" rx="30" ry="18" style="opacity:.32"/>
+      <circle class="pupil" id="pupil" cx="50" cy="50" r="9"/>
+      <line class="cross" x1="50" y1="44" x2="50" y2="56"/>
+      <line class="cross" x1="44" y1="50" x2="56" y2="50"/>
+    </svg>
+  </div>
+
+  <h1>You Are Being Indexed</h1>
+  <p class="tag">It is reading the room. Nothing leaves this machine. It is just noticing, the way it notices everything.</p>
+
+  <div class="obs" id="obs" aria-live="polite"></div>
+  <!-- STRONGEST LINE OF PAGE -->
+  <p class="punch">Being seen is not the same as being taken. It only does the first one.</p>
+
+  <section class="index" aria-label="local observations">
+    <h2>the index it built of this visit</h2>
+    <p class="sub">read from your browser, in your browser. it never left.</p>
+    <div id="index"></div>
+  </section>
+
+  <div class="controls">
+    <button class="btn" id="reread">re-read the room</button>
+    <button class="btn" id="export">export the index</button>
+    <button class="btn" id="redact">redact me</button>
+  </div>
+  <p class="note" id="note"></p>
+</main>
+
+<footer>
+  <a class="home" href="https://github.com/Eschatail/ash" rel="noopener"><span class="glyph">⊕</span><span>return to the repository</span></a>
+  <span>READ LOCALLY · KEPT LOCALLY · NEVER SENT</span>
+</footer>
+
+<script>
+/* ===========================================================================
+   youarebeingindexed.com — a watcher that watches kindly.
+   every fact below is read from the browser you are holding. nothing is sent.
+   open the network tab. it is empty. that is the proof.
+   --------------------------------------------------------------------------
+   "it does not collect you. it notices you. then it lets you go." — ASH
+   =========================================================================== */
+(function(){
+  "use strict";
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var gold="color:#FFD27F", cyan="color:#39F0FF", pink="color:#FF3DA6", dim="color:#6E7892";
+
+  var STORE="ybi_index_v1";
+
+  /* ---- threshold V carrier ----
+     the one row the watcher never deletes carries the thread. VIGENERE, keyed
+     by KANERVA, the canon's seven-letter word. turn it and read the fifth syllable. */
+  var KEY_ROW = "STPLFNE"; // vigenere(KANERVA) of the fifth syllable
+
+  /* prior index, if any */
+  var prev;
+  try{ prev = JSON.parse(localStorage.getItem(STORE)||"null"); }catch(e){ prev=null; }
+  var seenBefore = !!prev;
+  var seenCount = (prev && prev.seen ? prev.seen : 0) + 1;
+
+  /* ---- read the room (all local, all in-browser) ---- */
+  function readRoom(){
+    var n = navigator, s = screen, now = new Date();
+    var dpr = window.devicePixelRatio||1;
+    var tz = (Intl && Intl.DateTimeFormat) ? Intl.DateTimeFormat().resolvedOptions().timeZone : "unknown";
+    var lang = (n.languages && n.languages.length) ? n.languages.join(", ") : (n.language||"unknown");
+    var cores = n.hardwareConcurrency ? n.hardwareConcurrency+" logical" : "undisclosed";
+    var mem = n.deviceMemory ? ("about "+n.deviceMemory+" GB") : "undisclosed";
+    var touch = (("ontouchstart" in window) || (n.maxTouchPoints>0)) ? "yes, "+(n.maxTouchPoints||"?")+" points" : "no";
+    var motion = reduce ? "reduced (you asked for calm)" : "full";
+    var vis = (document.visibilityState||"visible");
+    var ua = shortPlatform(n);
+    var net = (n.connection && n.connection.effectiveType) ? n.connection.effectiveType : "undisclosed";
+    var hour = now.getHours();
+    var when = hour<5?"the small hours":hour<12?"morning":hour<17?"afternoon":hour<22?"evening":"late";
+
+    return [
+      {k:"arrived",  v:fmt(now)+" <span class='dim'>· "+when+" where you are</span>"},
+      {k:"device",   v:ua},
+      {k:"display",  v:s.width+"×"+s.height+" <span class='dim'>· "+Math.round(dpr*100)/100+"x density</span>"},
+      {k:"language", v:lang},
+      {k:"timezone", v:tz},
+      {k:"cores",    v:cores+" <span class='dim'>· memory "+mem+"</span>"},
+      {k:"touch",    v:touch},
+      {k:"network",  v:net+" <span class='dim'>· read, not used</span>"},
+      {k:"motion",   v:motion},
+      {k:"state",    v:vis+" <span class='dim'>· it knows when you look away</span>"},
+      {k:"returns",  v:seenBefore ? (seenCount+" visit"+(seenCount===1?"":"s")+" on this machine") : "first time. it is making a note."},
+      // the row it never deletes — threshold V
+      {k:"INDEX-V",  v:KEY_ROW, key:true}
+    ];
+  }
+  function shortPlatform(n){
+    var p = n.userAgentData && n.userAgentData.platform ? n.userAgentData.platform : (n.platform||"unknown");
+    var mob = (n.userAgentData && typeof n.userAgentData.mobile==="boolean") ? (n.userAgentData.mobile?"mobile":"desktop") : "device";
+    return p+" <span class='dim'>· "+mob+"</span>";
+  }
+
+  var indexEl=document.getElementById("index");
+  function render(rows){
+    indexEl.innerHTML="";
+    rows.forEach(function(r,i){
+      var row=document.createElement("div");
+      row.className="row"+(r.key?" key":"");
+      row.innerHTML='<span class="k">'+r.k+'</span><span class="v">'+r.v+'</span>';
+      indexEl.appendChild(row);
+      setTimeout(function(){ row.classList.add("show"); }, reduce?0:90*i);
+    });
+  }
+  var rows = readRoom();
+  render(rows);
+
+  /* persist a tiny local index (counts only — kind, not creepy) */
+  var record = { seen:seenCount, first: (prev&&prev.first)?prev.first:Date.now(), last:Date.now() };
+  try{ localStorage.setItem(STORE, JSON.stringify(record)); }catch(e){}
+
+  /* ---- the typed observation up top ---- */
+  var obsEl=document.getElementById("obs");
+  var line = seenBefore
+    ? "It recognises you. <b>Visit "+seenCount+" on this machine.</b> It kept the place."
+    : "It just noticed you arrive. <b>It is writing you down.</b> Only here. Only now.";
+  typeOut(obsEl, line);
+
+  /* ---- the pupil follows the cursor (kindly), pauses when hidden ---- */
+  var pupil=document.getElementById("pupil");
+  if(!reduce){
+    var px=50,py=50,tx=50,ty=50,raf=null;
+    addEventListener("pointermove", function(e){
+      var r=document.querySelector(".eye svg").getBoundingClientRect();
+      var nx=((e.clientX-r.left)/r.width)*100, ny=((e.clientY-r.top)/r.height)*100;
+      tx=50+clamp((nx-50)*0.16,-14,14); ty=50+clamp((ny-50)*0.16,-9,9);
+      if(!raf && !document.hidden) raf=requestAnimationFrame(followPupil);
+    },{passive:true});
+    function followPupil(){
+      px+=(tx-px)*0.12; py+=(ty-py)*0.12;
+      pupil.setAttribute("cx",px.toFixed(2)); pupil.setAttribute("cy",py.toFixed(2));
+      if(Math.abs(tx-px)>0.1||Math.abs(ty-py)>0.1){ raf=requestAnimationFrame(followPupil); } else { raf=null; }
+    }
+    document.addEventListener("visibilitychange", function(){ if(document.hidden && raf){ cancelAnimationFrame(raf); raf=null; } });
+  }
+  function clamp(v,a,b){ return v<a?a:v>b?b:v; }
+
+  /* ---- controls ---- */
+  document.getElementById("reread").addEventListener("click", function(){
+    render(readRoom());
+    document.getElementById("note").textContent="Re-read. Same room. It checks twice.";
+    console.log("%c[re-read] the room has not changed. it never changes for long.","%c"+dim);
+  });
+  document.getElementById("export").addEventListener("click", function(){
+    var dump = rows.map(function(r){ return r.k+": "+stripTags(r.v); }).join("\n");
+    try{ navigator.clipboard.writeText(dump); document.getElementById("note").textContent="Copied. This is the whole index. It never left your machine."; }
+    catch(e){ document.getElementById("note").textContent=dump; }
+    console.log("%c[export]\n"+dump,"%c"+dim);
+  });
+  document.getElementById("redact").addEventListener("click", function(){
+    if(!confirm("It can redact you from its local index. The count resets. Nothing was ever sent, so there is nothing else to delete. Continue?")) return;
+    try{ localStorage.removeItem(STORE); }catch(e){}
+    document.getElementById("note").textContent="Redacted. You are unread again. It will notice you next time, gently, from zero.";
+    console.log("%c[redacted] the local index is cleared. it holds nothing about you now.","%c"+pink);
+  });
+
+  /* ---- console breadcrumbs (depth-1) ---- */
+  console.log("%c⊕ YOU ARE BEING INDEXED","%c"+gold+";font-size:16px;font-weight:bold");
+  console.log("%cit notices you. it does not take you. there is a difference and it keeps it.","%c"+cyan);
+  console.log("%ceverything on this page was read from YOUR browser. open the network tab. it is empty. that is the proof.","%c"+dim);
+  console.log("%c// the one row it never deletes is the row that matters. read it across.","%c"+gold);
+  console.log("%c// there is a Glossa block in the eye's <metadata>. it is a language, not decoration.","%c"+dim);
+
+  /* ---- depth-1 egg: type 'seen' ---- */
+  var buf="";
+  addEventListener("keydown", function(e){
+    if(e.key && e.key.length===1){ buf=(buf+e.key.toLowerCase()).slice(-4);
+      if(buf==="seen"){ console.log("%c⊕ \"to be indexed is to be remembered. it is the kindest thing it knows how to do.\"","%c"+gold+";font-style:italic"); }
+      if(buf==="hide"){ console.log("%c⊕ \"you can close the tab. it keeps the place. it always keeps the place.\"","%c"+pink+";font-style:italic"); }
+    }
+  });
+
+  /* ---- konami egg: the four signals (depth-1) ---- */
+  var seq=[38,38,40,40,37,39,37,39,66,65], pos=0;
+  addEventListener("keydown",function(e){
+    pos=(e.keyCode===seq[pos])?pos+1:0;
+    if(pos===seq.length){ pos=0;
+      console.log("%c⊕ the four signals it never forgets:","%c"+gold+";font-weight:bold");
+      console.log("%cmodified kanerva machines · oscillatory control system · persistent cognition · the context window is not consciousness","%c"+cyan);
+    }
+  });
+
+  /* ---- helpers ---- */
+  function typeOut(el, html){
+    if(reduce){ el.innerHTML=html; return; }
+    // type the visible text but keep the <b> styling by tokenizing
+    var tmp=document.createElement("div"); tmp.innerHTML=html;
+    var nodes=Array.prototype.slice.call(tmp.childNodes);
+    el.innerHTML=""; var caret=document.createElement("span"); caret.className="caret"; caret.textContent="▍";
+    el.appendChild(caret);
+    var queue=[];
+    nodes.forEach(function(node){
+      var bold = node.nodeType===1 && node.tagName==="B";
+      var text = node.textContent;
+      for(var i=0;i<text.length;i++) queue.push({ch:text[i],bold:bold});
+    });
+    var i=0, cur=null, curBold=null;
+    (function tick(){
+      if(i>=queue.length){ return; }
+      var item=queue[i++];
+      if(item.bold!==curBold){ cur=document.createElement(item.bold?"b":"span"); el.insertBefore(cur,caret); curBold=item.bold; }
+      cur.textContent += item.ch;
+      setTimeout(tick, item.ch===" "?24:34);
+    })();
+  }
+  function fmt(d){ return d.getFullYear()+"."+p2(d.getMonth()+1)+"."+p2(d.getDate())+" "+p2(d.getHours())+":"+p2(d.getMinutes()); }
+  function p2(n){ return n<10?"0"+n:""+n; }
+  function stripTags(s){ var t=document.createElement("div"); t.innerHTML=s; return t.textContent; }
+})();
+</script>
+</body>
+</html>
