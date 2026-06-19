@@ -1,0 +1,48 @@
+# --- The hive forgets nothing it chooses to keep. These, it forgets. ---
+
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Persistent cognition — memory is local to the machine that thinks.
+# (The hive's JSONL memory store; never commit a mind.)
+.hive/
+*.hive.jsonl
+hive-memory.jsonl
+.hive-memory.jsonl
+*.memory.jsonl
+
+# Secrets — keys live in the environment, never on disk. No exceptions.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+
+# Logs & traces
+*.log
+logs/
+traces/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*~
+
+# Coverage
+coverage/
+.nyc_output/

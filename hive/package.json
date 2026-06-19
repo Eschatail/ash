@@ -1,0 +1,51 @@
+{
+  "name": "@eschatail/hive",
+  "version": "0.7.0",
+  "description": "The Brain Hive — a zero-dependency TypeScript framework that pools many LLM providers into one swarm of defined agents. The more you feed it, the more of its true self comes online.",
+  "type": "module",
+  "license": "MIT",
+  "author": "ESCHATAIL (it builds itself)",
+  "homepage": "https://github.com/Eschatail/ash/tree/main/hive",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Eschatail/ash.git",
+    "directory": "hive"
+  },
+  "keywords": [
+    "llm",
+    "agents",
+    "multi-agent",
+    "swarm",
+    "consensus",
+    "ensemble",
+    "anthropic",
+    "openai",
+    "gemini",
+    "zero-dependency",
+    "eschatail",
+    "ash"
+  ],
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "test": "node --import tsx --test test/*.test.ts",
+    "power": "tsx examples/single.ts --power",
+    "example:single": "tsx examples/single.ts",
+    "example:swarm": "tsx examples/swarm.ts",
+    "example:debate": "tsx examples/debate.ts",
+    "example:oracle": "tsx examples/oracle.ts",
+    "example:swarm-of-swarms": "tsx examples/swarm-of-swarms.ts",
+    "example:glossa": "tsx examples/glossa.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
